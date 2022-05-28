@@ -9,3 +9,5 @@ console.log(" ");
   4)ejecucion de codigo
   
 */
+//llamamos la constante de modulos
+import {} from "./constantes";
