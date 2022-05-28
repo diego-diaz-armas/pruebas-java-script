@@ -52,3 +52,9 @@ console.log(calc.restar(24,5));
 console.log(" ");
 
 
+//importaciones en react es muy comun ver 
+/*
+ import React, (component) from "React ";
+ si lo googleamos vemos que importan los modulo en react 
+*/
+
