@@ -10,7 +10,7 @@ console.log(" ");
   
 */
 //llamamos la constante de modulos
-import {PI} from "./constantes.js";
+import saludar,{Saludar,PI} from "./constantes.js";
 console.log(PI);
 console.log(" ");
 import {usuario} from  "./constantes.js";
@@ -30,3 +30,25 @@ console.log(" ");
 console.log(artimetica.sumar(24,5));
 console.log(artimetica.restar(24,5));
 console.log(" ");
+
+//la funcion default se exporta automaticamente sin el import
+//esta agregado en el import de PI
+// import saludar,{PI} from "./constantes.js";
+
+saludar();
+console.log(" ");
+//el usu de la clase
+let saludo=new Saludar();
+//console.log(saludo);
+saludo;
+console.log(" ");
+
+//alias para aritmetica
+import {artimetica as calc } from "./aritmetica.js";
+console.log(" ");
+console.log("alias para la funcion aritmetica:");
+console.log(calc.sumar(24,5));
+console.log(calc.restar(24,5));
+console.log(" ");
+
+
