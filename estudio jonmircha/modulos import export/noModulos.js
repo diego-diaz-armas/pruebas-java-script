@@ -1,0 +1,1 @@
+console.log("si el explorador no soporta modulos usamos esta manera no soporta modulos +ES6");

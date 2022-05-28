@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>condicionlaes y estructuras de control</p>
+    <script>
+    console.log("                 ");
+    console.log("if else");
+    console.log("                 ");
+
+    /*if-else*/
+    let edad=17;
+    if(edad>17){
+    console.log("mayor de edad");
+    }else{
+    console.log("menor de edad");
+    }
+    
+    console.log("                 ");
+    let edad1=17;
+    if(edad1<35){
+    console.log("mayor de edad");
+    }else{
+    console.log("menor de edad");
+    }
+    
+    console.log("                 ");
+    let edad2=17;
+    if(edad2>=17){
+    console.log("mayor de edad");
+    }else{
+    console.log("menor de edad");
+    }
+    
+    console.log("          ");
+    let edad3=17;
+    if(edad <=17){
+    console.log("eres mayor de edad");
+    }else{
+        console.log("eres menor de edad");
+    }
+
+    console.log("          ");
+console.log("if else if else anidado");
+console.log("          ");
+    /*if else if else anidado*/
+
+    /*buenos dias va de 6 am-11 am
+    buenas tardes 12 am -18 pm
+    muenas tardeas 19 pm -23pm 
+    dejame dormir 23pm - 5 am*/
+    console.log("                 ");
+    console.log("                 ");
+
+
+    let hora=17;
+
+    if(hora >= 0 && hora <=5){
+    console.log("dejame dormir");
+
+    }else if(hora <=6 && hora<=11){
+   console.log("buenos dias");
+    }else if(hora >=12 && hora <=18){
+   console.log("buenas tardes");
+    }else{
+   console.log("buenas noches");
+    }
+    console.log("                 ");
+    console.log("                 ");
+
+
+    let hora1=20;
+
+    if(hora1 >= 0 && hora1 <=5){
+    console.log("dejame dormir");
+
+    }else if(hora1 <=6 && hora1<=11){
+   console.log("buenos dias");
+    }else if(hora1 >=12 && hora1 <=18){
+   console.log("buenas tardes");
+    }else{
+   console.log("buenas noches");
+    }
+
+    console.log("                 ");
+    console.log("                 ");
+
+
+    let hora2=10;
+
+    if(hora2 >= 0 && hora2 <=5){
+    console.log("dejame dormir");
+
+    }else if(hora2 >=6 && hora2<=11){
+   console.log("buenos dias");
+    }else if(hora2 >=12 && hora2 <=18){
+   console.log("buenas tardes");
+    }else{
+   console.log("buenas noches");
+    }
+        
+    console.log("                 ");
+    console.log("                 ");
+
+
+    let hora3=3;
+
+    if(hora3 >= 0 && hora3 <=5){
+    console.log("dejame dormir");
+
+    }else if(hora3 >=6 && hora3<=11){
+   console.log("buenos dias");
+    }else if(hora3 >=12 && hora3 <=18){
+   console.log("buenas tardes");
+    }else{
+   console.log("buenas noches");
+    }
+    
+    console.log("                 ");
+    console.log("                 ");
+
+
+    let hora4=7;
+
+    if(hora4 > 0 && hora4 <5){
+    console.log("dejame dormir");
+
+    }else if(hora4 > 6 && hora4 < 11){
+   console.log("buenos dias");
+    }else if(hora3 > 12 && hora3 < 18){
+   console.log("buenas tardes");
+    }else{
+   console.log("buenas noches");
+    }
+
+    /*simplificacion del if else operador ternario
+      va de esta maera:
+      
+      termino(consdicion)? verdadero :falso*/
+      console.log("          ");
+      console.log("          ");
+
+      let edad5=23;
+
+      console.log("operador ternario");
+      console.log("          ");
+      /*el operador ternario que es la variable deve 
+      ser escrito con la condicion despues del ?
+       verdadera primero
+      y la falsa despues separados de:
+      la falsa va asi con un renglon saltiado empezando
+      con:*/
+      let eresMayor= (edad5 >= 18) 
+      ?"eres mayor de edad"
+      :"eres menor de edad";
+
+      console.log(eresMayor);
+      /*fin del operador terniario es esa linea as hay que usarlo*/
+      
+      console.log("            ");
+      console.log("            ");
+      console.log("Switch case");
+      console.log("            ");
+      
+      let dia=6;
+
+      switch(dia){
+          case 0:
+              console.log("domingo");
+            break;
+            case 1:
+              console.log("lunes");
+            break;
+            case 2:
+              console.log("martes");
+            break;
+            case 3:
+              console.log("miercoles");
+            break;
+            case 4:
+              console.log("jueves");
+            break;
+            case 5:
+              console.log("viernes");
+            break;
+            case 6:
+              console.log("sabado");
+            break;
+              default:
+                  console.log("el dia no existe");
+              break;
+      }
+    </script>
+</body> 
+
+</html>

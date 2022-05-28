@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>alert, confirm y prompt</p>
+    <script>
+        //metodos que cuelgan del objeto del windows del browser
+        console.log(window);
+        /*window.alert("esto es una alerta");
+        window.confirm("diferecia los botones de aceptar y cancelar");
+        window.prompt("esto es un prompt");//permite que el usuario ingresar un valor y lo almacena en el propt
+        //no es necesario usar el window para estos metodos*/
+        /*alert("alerta");
+        confirm("te duele toda la cabeza");
+        prompt("cuanto te duele del 1 al 100");*/
+        let alerta=alert("estas cansado");
+        let confirma=confirm("pensas rendirte");
+        let aviso=prompt("pone un numero y aguanta");
+        console.log(" ");
+        console.log(alerta);//siempre da undefined 
+        console.log(confirma);//da true or false
+        console.log(aviso);//almacena el valor y si le doy cancelar guarda null
+
+        console.log(" ");
+        //sirven para interactuar con el usuario masdaelante las vamos a usar mejor 
+    </script>
+</body> 
+
+</html>

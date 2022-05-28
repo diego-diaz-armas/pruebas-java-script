@@ -1,0 +1,14 @@
+*{
+    padding :0px;
+    margin:0px;
+    font-family: sans-serif;
+}
+.contenedor{
+                padding:0px;
+                margin: auto;
+                margin-top: 50px;
+                width: 600px;
+                height: 600px;
+                background-color: #ee9;
+                border : 10px dashed #aa9;
+}

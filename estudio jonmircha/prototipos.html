@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>prototipos</h1>
+
+<script>
+    /*java script es multiparadigma 
+    +++++++++++++
+    dentro de la poo
+    +++++++++++++
+
+    clases =son un esquema a seguir para poder generar una instancia
+
+    objetos- es una instancia de una clase
+
+    en los objetos hay          atributos = (caracteristica  o  propiedad de un objeto
+    son variables dentro de un objeto)
+                                metodos = son las accionesque un objetopuede realizar
+                                (son funciones dentro de un objeto)
+    */
+
+   const animal={
+       nombre:"kity",
+       sonar(){
+           console.log("hago sonidos por que esta viva")
+       }
+   }//animal es un objeto literal
+
+   const animal2={
+       nombre:"pancha",
+       sonar(){
+           console.log("hago sonidos por que esta viva")
+       }
+   }
+   console.log(animal2);//objeto literar
+   console.log(animal);//objeto literar
+
+   //esto no es funcional si quiero dos objetos con las mismas caracteristicas tengo que hacer el objeto denuevo
+   //para ayudar ha esto existen las class para poder crear varios objetos iguales
+
+   /*funcion constructora para crear varios objetos del mismo tipo hay que usar el uppercamelcase*/
+   
+   function Animal3(nombre,genero){//funcion constructora
+        //atributos
+        this.nombre=nombre;//estos son metodos que hacen referencia al constructor animal3 por el this
+        this.genero=genero;
+
+        //metodo
+        this.sonar=function(){//si no usamos el this no funciona como una funcion
+                    console.log("$$$$$$$$$$$$$$$");
+        }
+        //otro metodo de animal3
+        this.slaudar=function(){
+            console.log(`hola me llamo ${this.nombre}`);//estos metodos estan enlos dos objetos
+
+        }
+   }//con esta funcion constructora puedo crear varios objetos del mismo tipo
+
+        const kity= new Animal3("kity","hembra"),//tambien son dos instancias de mi funcion constructora
+              pancha=new Animal3("pancha","hembra");//aqui ingresamos los dos objetos con los parametros que le generamos a la funcion constructora
+            console.log("         ");
+        console.log(kity);//aquillamamos los objetos que estan creados con el function cosntructor
+        console.log(pancha);
+        kity.slaudar();
+        pancha.slaudar();
+        kity.sonar();
+        pancha.sonar();
+        //lo malo que esto duplica la funcion del constructor para todo los objetos del constructor
+        //para solucionarlo
+        console.log("++++++++++++++++++");
+        console.log("solucion");
+        //funcion constructora donde asignamos los metodos al prototipo no a la funcion
+        //---------------------------------------------
+        
+        function Animal4(nombre,genero){//funcion constructora
+        //atributos
+        this.nombre=nombre;//estos son metodos que hacen referencia al constructor animal3 por el this
+        this.genero=genero;
+        }
+        Animal4.prototype.sonar1=function(){//aqui le agregamos el metodo sonar por fuera de la funcion constructora
+                    console.log("$$$$$$$$$$$$$$$");
+        }
+        Animal4.prototype.slaudar1=function(){
+            console.log(`hola me llamo ${this.nombre}`);//aqui tambien le agregamos el metodo al constructor
+
+        }
+        const kity1= new Animal4("kity","hembra"),//tambien son dos instancias de mi funcion constructora
+              pancha1=new Animal4("pancha","hembra");//aqui ingresamos los dos objetos con los parametros que le generamos a la funcion constructora
+            console.log("         ");
+        console.log(kity1);//aquillamamos los objetos que estan creados con el function cosntructor
+        console.log(pancha1);
+        //aqui usamos la funcion del constructor que esta fuera del objeto no los repite pero los dos objetos posen esos metodos
+        kity1.slaudar1();
+        pancha1.slaudar1();
+        kity1.sonar1();
+        pancha1.sonar1();
+        /*cuando cremos varios animal4 todos los objetos tendran las funciones(metodos )saludar y sonar
+        sin repetirlos esto ayuda a la funcionalidad para no repetirlo mil veces
+        los metodos cuelgan del constructor animl4 para todos los animales creados con el prototypo 
+        animal4  */
+</script>
+
+<body>
+
+
+</body>
+</html>

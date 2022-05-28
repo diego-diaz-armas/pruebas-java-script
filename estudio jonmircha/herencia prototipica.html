@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>herencia prototipica</h1>
+
+<script>
+    console.log("        ");
+
+    //la herencia se da a manera prototipica
+    
+    //prototipo animal
+    function Animal(nombre,genero){
+        this.nombre=nombre;
+        this.genero=genero;
+    }
+
+    //metodos del prototipo animal
+    Animal.prototype.sonar=function(){
+console.log(`hola me llamo ${this.nombre}`);
+    }
+    Animal.prototype.saludar=function(){
+        console.log(`mi genero es ${this.genero}`);
+    }
+
+    //++++++++++++++++++++
+    //aca vamos a crear una herencia prototipica de animal
+    //++++++++++++++++++++
+
+    function Perro(nombre,genero,tamanio){
+        //super es un metodo que trai la herencia de una clase
+        this.super=Animal;//aca hacemos la asociacion de la herencia prototipica
+        this.super(nombre,genero);//super hereda de animal esos dos atributos
+        this.tamanio=tamanio;//como le agregamos un atribto hay que ponerlo de esta manera 
+    }
+    Perro.prototype=new Animal();//perro esta eredando de animal
+    Perro.prototype.constructor=Perro;
+    
+    //sobrescritura de los metodos del padre desde el hijo
+    Perro.prototype.sonar=function(){
+        console.log(`mi nombre es ${this.nombre}`);
+        console.log("soy un perro y mi sonido es un ladrido");
+    }
+    //metodo esclusivo de perro
+    Perro.prototype.ladrar=function(){
+        console.log("guuuau guuua");
+    }
+
+    // aca le creamos un objeto a perro para probarlo
+    const coli=new Perro("coli","macho","grande"),
+          pastor=new Perro("pastor","hembra","chico");
+
+          //mostramos attributos de perro
+        console.log(coli);
+        console.log(pastor);
+
+        pastor.sonar();
+        pastor.saludar();
+        pastor.ladrar();
+        console.log("              ");
+        coli.saludar();
+        coli.sonar();
+        coli.ladrar();
+
+        console.log("___________________");
+    //cuando una clase hija hereda los metodos de un padre aqui puede usar sus metodos
+
+
+    //aca le asigno los valores de dos animales 
+    const snoopy = new Animal("snoopy","macho"),
+          lolabonny = new Animal("lolabunny","hembra");
+
+    // aca uso el objeto animal con los que cree snoopy y lolabunny
+    console.log(snoopy);//aca mostramos los valores del objeto animal
+    snoopy.sonar();//usamos el metodo que cuelga del prototipe animal
+    snoopy.saludar();//usamos el metodo que cuelga del prototipe animal
+
+    console.log("--------------");
+
+    console.log(lolabonny);
+    lolabonny.sonar();
+    lolabonny.saludar();
+
+
+</script>
+
+<body>
+
+
+</body>
+</html>

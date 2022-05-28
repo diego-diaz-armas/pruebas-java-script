@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Estructuras repetitivas while dowihle, for, forof y forin </p>
+    <script>
+       console.log("++++++++++++++++");
+       console.log("while");
+       console.log("++++++++++++++++");
+
+       let contador = 0;
+
+       while(contador < 10){
+       console.log("while"+contador);
+            contador++;
+             /*si no le hacemos incremento el while
+              aria un bucle infinito while significa mientras
+              while compara primero antes de ejecutar el codigo
+              */
+        }
+
+        /*do while*/
+       console.log("++++++++++++++++");
+       console.log(" do while");
+       console.log("++++++++++++++++");
+         
+       let cont2=0;
+        
+       do {
+            console.log("do while" + cont2);
+            cont2 ++;
+        } while (cont2 < 10);
+
+        /*con do nos aseguramos de que el codigo se ejecute
+        por lo menos una vez antes de la comparacion */
+        //fin dowhile
+
+        console.log("++++++++++++++++");
+        console.log("for");
+        console.log("++++++++++++++++");
+        /*
+        forma de usar 
+
+        for(inicialisacion de variable;condicion ;decremento o increento){sentencias a ejecutar}
+
+        for(let index=0; index < array.length; index++){
+            const elemnet= array(index);
+        }
+        */
+       for (let i=0; i<10; i++){
+           console.log("for "+ i);
+       }
+       console.log("                   ");
+       let num=[10,20,30,40,50,60,70,80,90,100];
+
+       /*se puede hacer tambien con el foreach*/
+       for(let i=0; i<num.length; i++){
+           console.log("for en un array " +num[i]);
+           console.log("tambien se puede hacer con el metodo for each");
+       }
+       console.log("                          ");
+
+       /*for fo y for in*/
+
+       /*for in es un loop recorre un objeto
+       las propiedades for especial para objetos*/
+       console.log("++++++++++++++++");
+       console.log("for of & for in");
+       console.log("++++++++++++++++");
+       console.log("              ");
+       console.log("for in=");
+       console.log("---------------");
+       console.log("             ");
+       const die={
+           nombre:"diego",
+           apellido:"diaz",
+           edad:30
+       }
+
+       for(const propiedad in die){
+           console.log(propiedad);
+           /*iterarla propiedad mas elvalor*/
+           console.log(`key: ${propiedad},value:${die.propiedad}`);/*no funciona bien*/
+          
+           //console.log(`key: ${propiedad},value:${die[propiedad]}`);
+        }
+        console.log("           ");
+        for(const propiedad in die){
+           console.log(propiedad);
+           /*iterarla propiedad mas elvalor*/
+           //console.log(`key: ${propiedad},value:${die.propiedad}`);/*no funciona bien*/
+        
+           console.log(`key: ${propiedad},value:${die[propiedad]}`);
+        }
+       console.log("              ");
+       console.log("for of");
+       console.log("---------------");
+       console.log("              ");
+       /*el meto for of permite recorrer cualquier objeto
+       que sea iterable en java script es mas para arreglos
+        */
+
+        let cadena="hola mundo de diego suerte dios pliz";
+       
+        for(const elemento of num){
+           console.log(elemento);
+       }
+       console.log("              ");
+       for(const caracter of cadena){
+        console.log(caracter);
+       }
+
+    </script>
+</body>
+
+</html>

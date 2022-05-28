@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Numeros</p>
+    <script>
+        let a=2;
+        //new es un cosntructor
+        let b=new Number(1);
+        console.log(a,b);
+        let c=7.19;
+        console.log(c);
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(5));
+        //.toFixed son metodos parseInt devuelve la parte entera de un numero con punto
+            console.log(parseInt(c));
+            console.log(parseFloat(c));
+    //si nos viniera una cadena de texto con un numero dentro podriamos hacer
+    let d="5.6";
+    console.log(d);
+    console.log(typeof c,typeof d);
+    console.log(a+b);
+    console.log(c+d);//aca esta concatenando los valores no los suma
+    //casting convertir strin a int
+    console.log(c+parseInt(d));//aca igual suma los enteros no la parte despues del punto
+    console.log(c+parseFloat(d));//esto si lo hace bien
+//parseint o parseFloat cuelgan del constructor number
+//asi que es lo mismo hacer: Number es el constructor y parse es un metodo de dicho man
+    console.log(c+Number.parseInt(d));
+    console.log(c+Number.parseFloat(d));
+    
+    </script>
+</body>
+
+</html>

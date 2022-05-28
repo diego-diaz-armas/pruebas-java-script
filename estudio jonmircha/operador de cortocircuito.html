@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Operador de Cortocircuito</p>
+    <script>
+        //funcionan poniendo dos condiciones son el or el and 
+        console.log("un conjunto de operadores utiles AND OR ETC");
+
+        console.log(" ");
+        console.log("operador or");
+        //  or= || cuando el valor de la izquierda en la exprecion siempre se puede validar
+        //a true, es el valor que se cargara por defecto 
+        function saludar(nombre){
+            nombre=nombre||"desconocido";
+            console.log(`hola ${nombre}`);
+        }
+        saludar("diego");
+        console.log(" ");
+        console.log("sin  nombre la funcion hola da :");
+        saludar();//el desconocido es por esta linea sin nombre
+        console.log(" ");
+        console.log("cadena"||"valor de la derecha");
+        console.log(19||"valor de la derecha");
+        console.log(true||"valor de la derecha");
+        console.log([]||"valor de la derecha");//arreglo vacio
+        console.log({}||"valor de la derecha");//objeto vacio
+        console.log(-2||"valor de la derecha");
+
+        //solo cuando el valor primero es falso ocurre el de la derecha
+        //en estos casos son valores que tienden a falso
+        console.log(null||"valor de la derecha null");
+        console.log(undefined||"valor de la derecha undefined");
+        console.log(false||"valor de la derecha false");
+        console.log(""||"valor de la derecha string vacio");
+        console.log(0||"valor de la derecha 0" );
+
+        console.log(" ");
+        // And=&&   cuando el valor de la izquierda en la exprecion siempre pueda validar a false
+        //es el valor que se cargara por defecto
+        console.log("operador &&");
+        console.log(null&&"valor de la derecha null");
+        console.log(undefined&&"valor de la derecha undefined");
+        console.log(false&&"valor de la derecha false");
+        console.log(""&&"valor de la derecha string vacio");
+        console.log(0&&"valor de la derecha 0" );
+
+        //los que dan el valor de la derecha con and &&
+        console.log(" ");
+        console.log("valor de la derecha con and &&");
+        console.log("cadena"&&"valor de la derecha cadenas no vacias");
+        console.log(19&&"valor de la derecha 19");
+        console.log(true&&"valor de la derecha true");
+        console.log([]&&"valor de la derecha []");//arreglo vacio
+        console.log({}&&"valor de la derecha {}");//objeto vacio
+        console.log(-2&&"valor de la derecha -2 ");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Objetos date</p>
+    <script>
+       console.log(Date());
+        //Date constructor funcion de codigo nativo por eso date()
+        let fecha= new Date();//fecha es un nuevo objeto del tipo date
+        console.log(fecha);
+
+        /*usar solo el dia*/
+        console.log("           ");
+        console.log(fecha.getDate());//lo devuelve como numero
+        console.log("obtengo fecha en numero");
+        console.log("      ");
+        console.log(fecha.getDay());
+        console.log(`//nos devuelve un numero que corresponde a un dia de la
+        //semana que van de : dom lun mar mier juev vier saba ->0 1 2 3 4 5 6 estan organizados asi.`);
+        //nos devuelve un numero que corresponde a un dia de la
+        //semana que van de : dom lun mar mier juev vier saba ->0 1 2 3 4 5 6 estan organizados asi.
+        console.log("              ");
+        console.log("obtenemos el mes:");
+        console.log(fecha.getMonth());
+        //nos devuelve el numero del mes y esta organizado de esta manera
+        /*ene feb mar abr may jun jul ago sep oct nov dic 
+        -> 0   1   2   3   4   5   6   7   8   9   10   11*/
+        console.log(`nos devuelve el numero del mes y esta organizado de esta manera
+        /*ene feb mar abr may jun jul ago sep oct nov dic 
+        -> 0   1   2   3   4   5   6   7   8   9   10   11`);
+        console.log("          ");
+        console.log("año ");
+        //el year no es muy esacto get year es una abreviacion del año
+        console.log(fecha.getYear());
+        console.log(" ");
+        //usar mejor fullyear
+        console.log(fecha.getFullYear());
+        console.log(" ");
+        console.log("hora minutos y sgundos:");
+        console.log(fecha.getHours());//hora
+        console.log(fecha.getMinutes());//minutos
+        console.log(fecha.getSeconds());//segundos
+        //tiene formatos de 0 a 24 horas
+        console.log(fecha.getMilliseconds());//milisegundos
+        console.log("  ");
+
+        console.log("otras maneras de obtener la ora ejemplo tostrign");
+        console.log("  ");
+        console.log(fecha.toString());//igual al constructor new date
+        console.log(" ");
+        console.log("fecha con el string");
+        //y podemos estaraer la parte de la fecha
+        console.log(fecha.toDateString());
+        console.log(" ");
+        //tambien locate es muy util:
+        console.log("toLocaleDataString:");
+        console.log(fecha.toLocaleString());      
+        console.log(" ");
+        console.log("solo la fecha");
+        console.log(fecha.toLocaleDateString());
+        console.log(" ");
+        console.log("solo la hora");
+        console.log(fecha.toLocaleTimeString());
+        console.log(" ");
+        //sirve para ver el uso horario no es muy claro:
+        console.log("uso horario medio dificil de entender");
+        console.log(fecha.getTimezoneOffset());
+        console.log(" ");
+        console.log("conseguir otros usos horarios fecha utc:");
+        console.log(fecha.getUTCDate());
+        console.log("conseguir otros usos horarios hora utc:");
+        console.log(fecha.getUTCHours());
+        //utc nos daria la hora del meridiano 0
+        console.log(" ");
+        console.log("formato time stamp cuantos milisegundos pasarno de la fecha 1970 seria");
+        //fecha en formato time stamp;
+        //lo mejor es usar directamente el constructor
+        console.log(Date.now());
+        console.log(" ");
+        //liberira util para los tiempos moment.js recomendacion para menejo del tiempo
+        //calcular cumple diego
+        let cumple=new Date(1990,6,5);//pasamos mi año de nacimiento
+        console.log(cumple);
+    </script>
+    </body>
+</html>

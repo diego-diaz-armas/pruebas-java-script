@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>Métodos estáticos, getters y setters</h1>
+
+<script>
+    console.log(" metodos estaticos,getters y setters:");
+    console.log("--------------------------------------");
+    //no podemos hacer una class privada en javascript 
+
+    //un metodo estatico es aquel que se puede ejcecutar ain necesidad de inastanciar la clase
+
+/*aca voy a crear i metodo estatico
+    
+    recuerda un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase______*/
+    
+
+    class Animal2{
+        //el construcyor de unaclassse es un metodo especial
+
+        constructor(nombre,genero){
+        this.nombre=nombre;
+        this.genero=genero;
+        }
+        //metodos se declaran de esta manra
+        sonar(){
+            console.log("hago sonidos porque estoy vivo");
+        }
+        saludar(){
+            console.log(`hola me llamo ${this.nombre}`);
+            console.log(`y mi genero es ${this.genero}`);
+           
+    }
+    }
+
+    console.log("             ");
+    const jhony=new Animal2("jhony","macho"),
+          laura=new Animal2("laura","hembra");
+
+        console.log(jhony);
+        console.log(laura);
+
+        jhony.sonar();
+        jhony.saludar();
+        
+        console.log("              ");
+
+        laura.saludar();
+        laura.sonar();
+        console.log("                     ");
+    //herencia entre classes
+    //super manda a llamar al constructor
+        
+    class Perro extends Animal2{
+            constructor (nombre,genero,tamanio){
+                super(nombre,genero);
+                //super es un metodo que manda a llamar el constructor de la class padre
+                this.tamanio=tamanio;
+                this.raza=null;//el valor de raza al inico de que se cre un perro va a ser nulo
+            }
+            sonar(){
+                console.log("soy un perro y mi aonido es un ladrido");
+            }
+            ladrar(){
+                console.log("guuuawww wwuuuagg");
+            }
+            //recuerda un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase______
+            
+            static queEres(){
+        console.log(`los perros somos animales mamiferos que pertenecen a la familia de los caninos .
+        somos considerados los mejores amigos de los hombres`);
+         }
+         //setter y getters
+        get getRaza(){
+                //metodo obtenedor de la raza
+                return this.raza;
+         }
+         set setRaza(raza){
+            this.raza=raza;
+            //metodo para poner la raza
+         }
+        }
+        const scooby=new Perro("scooby","macho","grande");
+
+        console.log(scooby);
+        scooby.saludar();
+        scooby.ladrar();
+        scooby.sonar();//sonar metodo de la class padre esta sobrescrito por que lo modificamos en el hijo
+            
+        Perro.queEres();//usar el metodo estatico sin crear un objeto
+        console.log("             ");
+
+        //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de 
+        //atributtos de nuestra classe 
+
+        console.log("Getters y Setters:");
+        //a la classe perro le ingresaremos o modificaremos raza
+
+        
+        //los ester y getter hay que usaros como si fueran una propiedad
+
+        //usar get y set
+        /*scooby.getRaza(); no funciona*/
+        //set modifica la propiedad raza por eso hay queusarlos como propiedad
+        scooby.setRaza="gran danes";
+        console.log("su raza es :");
+        console.log(scooby.getRaza);
+
+</script>
+
+<body>
+
+
+</body>
+</html>

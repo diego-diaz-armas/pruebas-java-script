@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>destructuracion</p>
+    <script>
+        /*nueva caracteristica a nivel de estructura desde 2015*/
+        /*si quisieramos separar las variables de un arreglo podemos usar la desestructuraion*/
+        
+        const num=[1,2,3,];
+        const [one,tow,three]=num;
+        console.log("con desestructuracion " +one+tow+three);
+        console.log("             "); 
+
+        /*sin usal la desestructuracion*/
+        let uno=1, dos=2, tres=3;
+        console.log("sin destructuracion  " +uno +dos+ tres);
+        console.log("             ");
+
+        console.log("si tuvieramos un objeto y ubiera que separar los atributos en variables");
+        console.log("                ");
+        
+        const persona={
+            nombre:"diego",
+            apellido:"diaz",
+            edad:30
+            //mi objeto persona puede ser const o let
+        }
+
+        let{nombre,apellido,edad} =persona;
+        console.log("resultado: "+nombre,apellido,edad);
+    </script>
+    </body>
+</html>

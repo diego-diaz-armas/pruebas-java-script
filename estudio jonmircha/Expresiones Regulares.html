@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Expresiones Regulares</p>
+    <script>
+      //EXPRECIONES REGULARES
+      /*SON UNAS SECUENCIAS DE CARACTERES QUE FORMAN UN PATRON DE BUSQUEDA
+      , PRINCIPALMENTE UTILIZADAS PARA LA BUSQUEDA DE PATRONES DE CADENAS DE CARACTERES
+
+      https://developer.mozilla.org
+      */
+
+      console.log("");
+      /* escribe en el html */document.write("Diego Diaz un gran progrmaador");
+      console.log("san google");
+      console.log(" ");
+      console.log("definicion de exprecion regular");
+
+      let cadena=`    A los niños les 1 encantan los cuentos&. 
+       No es %de sorprendernos,3 estos nos transportan 2a mundos mágicos,producen emociones como la alegría, simpatía y compasión por nombrar so  
+       lo algunas.`;
+      console.log(cadena);
+
+      let expREG = new RegExp("si","ig");//busca la en todo el parrafo y la g es una bandera que busca todos los el i ingora entre la mayuscula y minusculas
+      let expReg2 = /no/ig;
+      console.log(" ");
+      //probando la primer exprecion regular
+      console.log(expREG.test(cadena));
+      console.log(expREG.exec(cadena));
+      console.log(" ");
+      console.log(expReg2.test(cadena));
+      console.log(expReg2.exec(cadena));
+      console.log("");
+      
+      //algunos modificadores utiles :
+      //numeros
+      let expReg3 = /[0-9]/ig;//Busca cualquier dígito (número arábigo). Equivalente a [0-9] ig=que busca en toda la cadena y ignora mayusculas y minusculas
+      console.log(expReg3.exec(cadena));
+      console.log(expReg3.test(cadena));
+      console.log(" ");
+      let expReg4 =/\d/ig;//Busca cualquier dígito (número arábigo). Equivalente a [0-9]
+      console.log(expReg4.exec(cadena));
+      console.log(expReg4.test(cadena));
+      let expReg7 =/\D/ig;//Busca cualquierque NO sea un dígito  (número arábigo). Equivalente a [0-9]
+      console.log(expReg7.exec(cadena));
+      console.log(expReg7.test(cadena));
+      console.log(" ");
+      let expReg5 =/\w/igu;//Busca cualquier caracter alfanumérico del alfabeto latino básico, incluido el caracter de subrayado. Equivalente a [A-Za-z0-9_].
+      console.log(expReg5.exec(cadena));
+      console.log(expReg5.test(cadena));
+      let expReg6 =/\W/igu;//cualquier caracter que NO sea un caracter de palabra del alfabeto latino básico.
+      console.log(expReg6.exec(cadena));
+      console.log(expReg6.test(cadena));
+      let expReg8 = /\s/igu;//Busca un solo caracter de espacio en blanco, incluido el espacio, tabulación, avance de página, avance de línea y otros espacios Unicode. 
+      console.log(expReg8.test(cadena));
+      console.log(expReg8.exec(cadena));
+      console.log(" ");
+      let expReg9 = /\S/igu;//Busca un solo caracter de espacio en blanco, incluido el espacio, tabulación, avance de página, avance de línea y otros espacios Unicode. 
+      console.log(expReg9.test(cadena));
+      console.log(expReg9.exec(cadena));
+      console.log(" ");
+      let expReg10 = /\t/ig;//Coincide con una tabulación horizontal.
+      console.log(expReg10.test(cadena));
+      console.log(expReg10.exec(cadena));
+      console.log(" ");
+      let expReg11 = /\r/ig;//Coincide con un retorno de carro.
+      console.log(expReg11.test(cadena));
+      console.log(expReg11.exec(cadena));
+      console.log(" ");
+      let expReg12 = /\n/ig;//Coincide con un salto de línea (enter).
+      console.log(expReg12.test(cadena));
+      console.log(expReg12.exec(cadena));
+      console.log(" ");
+      let expReg13 = /\v/ig;//Coincide con una tabulación vertical.
+      console.log(expReg13.test(cadena));
+      console.log(expReg13.exec(cadena));
+      console.log(" ");
+      //EL ULTIMO CODIGO PROVIENE DE MDN
+      let expReg14 =/\b[sS]\w+/ig;//	Coincide con un caracter de retroceso. Si estás buscando el carácter de límite de palabra (\b)
+      console.log(expReg14.test(cadena));
+      console.log(expReg14.exec(cadena));
+      console.log(" ");
+      let expReg15 =/\b[SOLsol]\w+/ig;
+      console.log(expReg15.test(cadena));
+      console.log(expReg15.exec(cadena));
+      console.log(" ");
+      
+
+      let expReg16 =/\b[ni]\w+/ig;
+      console.log(expReg16.test(cadena));
+      console.log(expReg16.exec(cadena));
+      console.log(" ");
+      
+            // ejercicios de mdn
+      let datosAleatorios = "015 354 8787 687351 3512 8735";
+      let expReg17 =/\b\d{4}\b/g;
+      /*
+      // \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
+// \d{4} indica un dígito, cuatro veces
+// \b indica otro límite (es decir, no termina la coincidencia en medio de una palabra)
+      */
+      console.log(expReg17.test(datosAleatorios));
+      console.log(expReg17.exec(datosAleatorios));
+      //el resultado es los numeros es :
+      console.table(datosAleatorios.match(expReg17));
+      console.log(" ");
+
+      var extractoAlicia = "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
+var regexpPalabraEmpiezaConA = /\b[aA]\w+/g;
+// \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
+// [aA] indica las letras a o A
+// \w+ indica cualquier carácter *del alfabeto latino*, varias veces
+
+console.table(extractoAlicia.match(regexpPalabraEmpiezaConA));
+// ["Ada", "absoluto"]
+
+var textoNoEs = "Приключения Алисы в Стране чудес";
+var regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+// BMP pasa por U+0000 a U+FFFF pero el espacio es U+0020
+
+console.table(textoNoEs.match(regexpPalabraBMP));
+//[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+
+
+    </script>
+</body> 
+
+</html>

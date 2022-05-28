@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>String</h1>
+<br>
+<ul>
+    <li>primavera</li>
+    <li>verano</li>
+    <li>otoño</li>
+    <li>invierno</li>
+</ul>
+<script>
+    console.log("hola");
+    //esto ya es un string en javascript
+    let nombre="Mortal";
+    let apellido='kombat';
+
+    //new es un constructor pero no es lo  mismo que los anteriores;
+    let edad=new String("39");
+    console.log(nombre,apellido,edad);
+
+    //lenth propiedad de string muestra cantidad de caracteres
+    console.log(nombre.length,apellido.length,edad.length);
+
+    //metodos de string algunos:
+
+    let lorem="           Lorem ipsum,dolor sit ametconsectetur adipsicing.";
+    console.log(
+        nombre.toUpperCase(),
+        //toUpperCase pone el dato todo en mayuscula
+        apellido.toLowerCase(),
+        //toLowerCase pone el dato todo en minuscula
+        lorem.includes("dolor"),
+        //includes busca una palabra dentro de un string devuelve true or false
+        lorem.includes("kombat"),
+        //trim quita los espacios en blanco alrededor del texto 
+        lorem.trim(),
+        //split crea un arreglo sihay algun caracter que nos sirva para separarlo
+        //en este caso split es separado por espacio
+        lorem.split(" "),
+        lorem.split(",")
+        );
+        //propiedades son caracteristicas de las variables eje: .length
+        //y metodos son funciones o acciones de dichas variables eje:
+        //split(" "),.trim(),.toUpperCase(),.includes("kombat"),.toLowerCase(),;
+
+        console.log("+++++++++++++++++++++++++++++++++++++++++++");
+        console.log("mas sobre string TEMPATE STRINGS");
+        console.log("                         ");
+        console.log("concatenacion y interpolacion:");
+        console.log("                         ");
+        //concatenacion
+        let nombre1="diego";
+        let apellido1="diaz";
+
+        let saludo="Hola mi nombre es: " + nombre1 + " " + apellido1 + "."
+        console.log(saludo);
+
+        //interpolacion de variables
+        let saludo2=`hola mi nombre es : ${nombre1} ${apellido1}.`
+        console.log(saludo2);
+        
+
+    //esto seria un template string
+        let estaciones="<ul><li>primavera</li><li>verano</li><li>otoño</li><li>invierno</li></ul>";
+        console.log(estaciones);
+        let estaciones2=`
+        <ul>
+            <li>primavera</li>
+            <li>verano</li>
+            <li>otoño</li>
+            <li>invierno</li>
+        </ul>`;
+        console.log(estaciones2);
+
+        //si lo hicieramos sin template string con conatenacion seria 
+        let estaciones3="<ul>";
+            estaciones3+="<li>primavera</li>";
+            estaciones3+="<li>verano</li>";
+            estaciones3+="<li>otoño</li>";
+            estaciones3+="<li>invierno</li>";
+            estaciones3+="</ul>";
+
+            console.log(estaciones3);
+            console.log("             ");
+            console.log("fin de string hay mas igual");
+</script>
+
+<body>
+
+
+</body>
+</html>

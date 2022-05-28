@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Funciones Anónimas Autoejecutables</p>
+    <script>
+        /*patron de ejecucion de codigo con javascript puro es una funcion que engloba 
+        todo el codigo que quiero ejecutar
+        
+        jquery usa funciones de este tipo para mas info :
+        
+        https://cdnjs.com/libraries/jquery
+        y
+        para ver que tiene escrito :
+        https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js
+        */
+
+        // como es una fumcion sin nombre va entre parentecis()
+
+        /*(function (){//asi se declara una funcion anonimael segundo parentecis es el que ejecuta la funcion
+        
+        })();
+        alert("hola")     //asi se declara una funcion anonima
+        la comentte para que no genere conflictos con los ejercicios
+        */
+
+        (function (){
+            console.log("mi primera inmediatly invoque function executable (IIFE)");
+        })();
+        console.log(" ");
+
+        //como funciona el paso de parametros  en las funciones anonimas:
+        //este patron era muy famoso en la epoca que se creaban plugin en jquery
+        //le pasamos el dom = document
+        //              window=window del que cuelgan todos los objetos
+        //              console: que es la consola
+        //osea que d=document,w=windows,c=console
+
+
+        (function (d,w,c){
+            console.log("mi segunda IIFE");
+            c.log(" ");
+            console.log(d);//contiene el documento del html 
+            console.log(w);// los objetos que cuelgen de windows
+            c.log(" ");
+            c.log("este contiene lo de console ");//la consola
+        })(document,window,console);
+
+        console.log(" ");
+
+        //estructura de las funciones aninimas autoejecutables
+        console.log("!!estructura de las funciones aninimas autoejecutables!!");
+        console.log(" ");
+        //clasica
+        (function (){
+            console.log("forma clasica");//sin el ; funcionan igual
+        })();
+
+        console.log(" ");
+
+        //la Crockford (javascript the god part)
+        ((function(){
+            console.log("vercion Crockford")
+        })());
+
+        console.log(" ");
+        
+        //Unaria
+        +function(){
+            console.log("vercion Unaria");
+        }();
+
+        console.log(" ");
+        
+        //Facebook
+        !function(){
+            console.log("vercion Fcebook");
+        }();
+        console.log(" ");
+
+        //fue un patron muy utilizado en jquer etc antes de angular react,etc
+        //es una manera de encapsular codigo
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>boolean</p>
+    <script>
+        let verdadero=true;
+        let falso=false;
+        let v=Boolean(true);
+        //este va con el constructor
+        console.log(v);
+        console.log(falso,verdadero);
+        console.log(typeof verdadero,typeof falso);
+    
+        console.log("0 es=" + Boolean(0));
+        //esto tiende a falsoel numero 0
+        console.log("-7 es=" + Boolean(-7));
+        //esto tiende a true
+        console.log("             ");
+        //cadena de texto vacia tiende a falso
+        console.log("texto vacio es=" + Boolean(""));
+        //pero si tiene algo escrito tiende a verdadero
+        console.log("texto no vacio="+Boolean("a"));
+        //mas info en mdn truthy o falsy
+        
+
+    </script>
+</body>
+
+</html>

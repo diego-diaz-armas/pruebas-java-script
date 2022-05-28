@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Objetos console</p>
+    <script>
+        //algunos objetos propios de javascript:
+        
+        //es un objeto que ya reconose javascript
+        console.log(console);
+        //haciendo esto vemos todos los metodos de consolesolo tiene un propiedad memory
+        console.log("               ");
+
+        console.error("esto es un error");
+        //marca los mensajes como error
+
+        console.log("              ");
+        console.warn("esto es un aviso");
+        //marca los mensajes como un warning
+        console.log("              ");
+
+        console.info("hola");
+        //mensaje informativo
+        console.log("            ");
+
+        console.log("console.log es un registro de lo que ha pasadoen nuestra app");
+
+        console.log("             ");
+
+        let nombre="diego",
+            apellido="diaz",
+            edad=30;
+            console.log(nombre);
+            console.log(apellido);
+            console.log(edad);
+            console.log("            ");
+            console.log(nombre,edad,apellido);
+            //interpolacion de variables
+            console.log("interpolacion de variables");
+            console.log(`hola mi nombre es  ${nombre} mi apellido${apellido} y mi edad es ${edad}`);
+            console.log("           ");
+            console.log("uso de comodines");
+            //comodiens 
+            console.log(`hola mi nombre es  %s mi apellido %s y mi edad es %d`,nombre,apellido,edad);
+            // se remplazan los comodines %spor nombre y apellido y edad por %d estos son comodines
+
+            console.log("           ");
+            console.log("console.clear(); limpia la consola");
+            //limpiar la consloa
+           // console.clear();
+
+           console.log("            ");
+
+           console.log(window);
+           console.log(document);
+            console.log("           ");
+           console.dir(window);//muestra a manera de objeto
+           console.dir(document);//sirve para ver todos los metodos y atributos de un documento
+
+           console.log("             ");
+           console.group("Cursos de @jonmircha en youtube");
+           console.log("curso de javascript");
+           console.log("curso de node.js");
+           console.log("curso de mysql");
+           console.log("curso de flexbox");
+           console.log("curso de dieseño y programacion web");
+           console.groupEnd();
+
+           console.log("             ");
+           console.groupCollapsed("Cursos de @jonmircha en youtube");
+           console.log("curso de javascript");
+           console.log("curso de node.js");
+           console.log("curso de mysql");
+           console.log("curso de flexbox");
+           console.log("curso de dieseño y programacion web");
+           console.groupEnd();
+
+           console.log("              ");
+
+           console.log(console);
+            console.log("el contenido de console como tabla desordenado");
+           console.table(Object.entries(console));//muestra la propiedades y metodos de el objeto console en una tabla
+            //lo trata como si fuera un array
+            //si lo quisiera ordenar
+            console.log("                     ");
+            console.log("el contenido de console como tabla ordenado");
+            console.table(Object.entries(console).sort());
+           console.log("             ");
+            //si creamos 2 arrays
+            const numeros=[1,2,3,4,5],
+            vocales=["a","e","i","o","u"];
+            // con los dos arrays juntoos no funcionaconsole.table(numeros,vocales);
+            console.table(numeros);
+            console.table(vocales);
+
+            console.log("          ");
+
+            //en los objetos
+            const perro={
+                nombre:"boni",
+                raza:"boxer",
+                color:"marron"
+            }
+            console.table(perro);
+            console.log("              ");
+
+            //un metodo de ver cuanto tarda en procesar el tiempo ejemploso
+            console.time("cuanto tiempo tarda de procesar mi codigo inicio del time");
+            const arry=Array(1000);
+            for(let i=0;i<arry.length;i++){//recorremos el array  
+                arry[i]=i;//aca le guardamos el numero que esta en la posicion como valor
+            }
+            console.timeEnd("cuanto tiempo tarda de procesar mi codigo inicio del time");//debe ser el mismo textoen la apertura timy cierre
+            console.log(arry);//vemos si lleno el array
+
+            console.log("         ");
+
+            //si quieres ver cuantas veces se a ejecutado un codigo
+            for(let i=0;i<100;i++){
+                console.count("codigo for");//muestra cuantas veces se ejecuta el for
+                console.log(i);
+            }
+
+            console.log("                     ");
+            //hay libreriaspara testear el codigo un ejemplo
+            let x=1,
+            y=2,
+            pruebaxy="se espera que x siempre sea menor que y";
+            console.assert(x<y,{x,y,pruebaxy});
+            //no paso nada la prueba es correcta haora que falle
+            let x1=3,
+            y1=2,
+            pruebaxy1="se espera que x siempre sea menor que y";
+            console.assert(x1<y1,{x1,y1,pruebaxy1});
+
+        //assert solo se ejecuta cuando la prueba fallo es como una prueba unitaria 
+        //en la console hay como 20  metodos utiles mas 
+
+    </script>
+    </body>
+</html>

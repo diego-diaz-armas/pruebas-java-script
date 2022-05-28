@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <h1>var y let</h1>
+    <script>
+        var hola="hola mundo";//variables con var son de ambito global.
+
+        let hello="hello world";//let variable de ambito de bloque solo funciona en ese bloque
+        console.log(hello);
+        console.log(hola);
+        console.log(window);//tiene muchas cosas y la variable hola mundo aparece en el scope globa
+        // console.log(windows.hello);//da error por ser let
+        
+        /*comentario
+        de varias lineas 
+        */
+         console.log(window.hola);
+         //windows es un objeto global del front y
+         // node que es javascript del lado del servidor es global el objeto.
+        
+         console.log("**************var****************");
+
+         var musica="jazz";
+        console.log("variable musica antes del bloque:",musica);
+        {
+            var musica="pop";
+            console.log("variable en el bloque:",musica);
+            //cambia el valorde musica global a pop
+        }
+        console.log("variable musica antes del bloque:",musica);
+
+        console.log("**************let****************");
+
+        let musica1="jazz";
+        console.log("variable musica antes del bloque:",musica1);
+        {
+            let musica1="pop";
+            console.log("variable en el bloque:",musica1);
+            //cambia el valorde musica global a pop
+        }
+        console.log("variable musica antes del bloque:",musica1);
+
+    </script>
+</body>
+
+</html>

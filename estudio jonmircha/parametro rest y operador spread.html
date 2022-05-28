@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Parámetros REST & Operador Spread</p>
+    <script>
+        /*caracteristicas Parámetros REST & Operador Spread
+        
+        PARAMETROS REST SON UNA FORMA DE AGRARAR PARAMETROS INFINITOS A FUNCION O VARIABLE
+
+        */
+
+        function sumar(a,b, ...c){
+            /* la variable ...c es un rest que permite agregar un tercera variable si es necesario*/
+            let resultado = a+b;
+            c.forEach(function(n){
+                //esto lo que dice que si hay un tercer termino lo suma con resultado
+                //donde c es el rest(...c) y n es el valor de esa variable esto lo tratamos como si fuera un arreglo por eso el metodo for each
+                //el for each lo suam por cada uno de los elementos que vengan a c y c puede o no ser infinitos numeros
+                /* apartir de tercer valor los empieza a crear dinamicamente  estos son parametros que recibe una funcion*/
+                resultado +=n
+            });
+            return resultado;
+            /*en resumen te da la capacidad de tener parametros (variables) infinitos el rest*/
+        }
+        console.log("REST ...VARIABLE");
+        console.log("        ");
+        console.log(sumar(1,5));
+        console.log(sumar(1,3,6));
+        console.log(sumar(1,4,6,7,8,9));
+        console.log("-------------------");
+        console.log("               ");
+        console.log("operador Spread o operador de propagacion");
+        console.log("                  ");
+
+        const arr1=[1,2,3,4,5],//estos son arreglos
+              arr2=[6,7,8,9,0];
+
+              console.log(arr1,arr2);
+
+              //si tengo que crear un arreglo 3 con estos dos
+              const arr3=[arr1,arr2];
+              console.log(arr3);
+              /*esto no fuciona los arreglos 1 y 2 en uno solo los pone separados dentro de un nuevo arreglo*/
+              //para fucionarlos para hacerlo un solo arreglo de 10 posiciones
+              const arr4 =[...arr1,...arr2];
+              /*con el spred operator fuciona dichos arreglos en uno solo */
+              console.log(arr4);
+              /*el sored te da la capacidad de te permite agregar o fucionar arreglos u objetos permite expandir objetos sin perder lo anterior
+              manteniendo las propiedades anteriores mas las que yo quiera afectar*/
+
+    </script>
+    </body>
+</html>

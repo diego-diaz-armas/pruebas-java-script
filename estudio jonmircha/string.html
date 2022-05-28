@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>String</h1>
+<script>
+//cadena de texto aka string 
+let nombre="diego";
+let apellido=`diaz`;
+let saludo= new String("hola mundo");
+
+let lorem=` El Lorem Ipsum fue concebido como un texto de relleno, 
+formateado de una cierta manera para permitir la presentación
+ de elementos gráficos en documentos, sin necesidad de una copia formal.
+  El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la 
+  forma del contenido antes de que el contenido se haya creado, 
+dando al diseño y al proceso de producción más libertad.`;
+
+// ojo con la mayuscula de string
+console.log(nombre,apellido,saludo);
+
+console.log(
+    nombre.length,
+    apellido.length,
+    saludo.length,
+    nombre.toUpperCase(),
+    apellido.toLowerCase(),
+    lorem.includes("Ipsum"),
+    lorem.includes("diego"),
+    lorem,
+    lorem.trim(),//quita espacios en blanco en el principio y el final
+    lorem.split(" "), //genera un arreglo le necesitamos un separador como espacio
+    lorem.split(",")
+);
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>

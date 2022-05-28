@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>break & continue</p>
+    <!--comentario en html-->
+    <script>
+        /*las palabras break continue esta pensadas para ser usadas en wihle ,for switch
+        do while if case se usan en estructuras de control */
+
+        const num =[1,2,3,4,5,6,7,8,9,0];
+
+        for(let i=0; i < num.length; i++){
+            
+            if(i===5){
+                break;
+            }
+            console.log(num[i]);
+        }
+        /*esto hace que cuando llegue a 5 el break sale de la estructura de control*/
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+        const num2=[1,2,3,4,5,6,7,8,9,0];
+        for(let i2=0;i2 < num2.length; i2++){
+            if(i2===5){
+                continue;
+                /*omite la linea 5 del siclo poreso se saltea el 6*/
+            }
+            console.log(num2[i2]);
+        }
+        console.log("-----------------");
+        /*for comun*/
+        const num3=[1,2,3,4,5,6,7,8,9,0];
+        for(let i3=0; i3<num3.length; i3++){
+            console.log(num3[i3]);
+        }
+    </script>
+</body>
+
+</html>

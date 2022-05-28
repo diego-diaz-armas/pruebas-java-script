@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Manejo de Errores</p>
+    <script>
+        /*try catch finali */
+try{
+console.log("en el try se agrega el codigo a evaluar");
+console.log(" ");
+
+}catch(error){
+console.log("en el catch catura cualquier error surgidoo lanzado en el try" );
+console.log(" ");
+
+}finally{
+    console.log("elbloque finalty se ejecutara siempre al final de un bloque try-catch");
+    console.log(" ");
+}
+/*el catch no se ejecuto por que no hay error en el codigo por eso solo mostrara el try y el finally*/
+console.log(" ");
+console.log("----------------------------------------");
+try{
+console.log("en el try se agrega el codigo a evaluar");
+console.log(" ");
+noExiste;
+/*cuando se detecta error en el try no sigue lleyendo las demas linas y muestra el error en el catch */
+}catch(error){
+console.log("en el catch catura cualquier error surgidoo lanzado en el try" );
+console.log(" ");
+/*en este caso creamos la variale no existe mal declarada para que lo tome el 
+catch y aprece en la consola*/
+
+}finally{
+    console.log("elbloque finalty se ejecutara siempre al final de un bloque try-catch");
+    console.log(" ");
+    /*siempre que alla error o no el bloque fianlly se va aejecutar*/
+}
+
+console.log("------------------------------------------------");
+/*mensajes de error personalizados*/
+
+try{
+    let num= 10;
+
+    if(isNaN (num)){
+        /*isNan mira si la comaracion es numero y devuelve tru o false */
+        throw new Error("no es un numero");//error personalizado mas info de throw en mdn
+    }
+    console.log(num+num);
+
+}catch(error){
+    console.log(`se produjo el siguiente erro: ${error}`);
+}
+//probando el mismo try-catch con letras
+console.log("            ");
+try{
+    let num= "a";
+
+    if(isNaN (num)){
+        /*isNan mira si la comaracion es numero y devuelve tru o false */
+        throw new Error("no es un numero");//error personalizado mas info de throw en mdn
+    }
+    console.log(num+num);
+
+}catch(error){
+    console.log(`se produjo el siguiente erro: ${error}`);
+}
+console.log("            ");
+
+
+    </script>
+</body>
+
+</html>

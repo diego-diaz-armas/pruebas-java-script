@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Módulos ( import / export )</p>
+    
+    <!--vamos a separar los codigos en archivos independient osea epmesamos a separar el codigo correctamente
+       la progamacion va a estar creada en archivos javascript independiente 
+        * si se indique lo contrario invocaremos el archivo desde el <head>
+            pero se invoca siempre dentro de las etiquetas <body>
+        * esta es la sentecia para vincular el js al <html> <script src="carpeta/archivo.js"></script>
+
+        **usar xampp desde haora por que live server da error
+        <script src="modulos.js"></script>
+        la ruta de acceso para un archivo siempre es la contrabarra pero no me sirve 
+                C:\Users\elpio\Desktop\pruebas java script\estudio jonmircha\modulos import export\ModulosImportExport.html\modulos.js
+   
+                    buscando soluciones para el error del las direcciones encontre:
+                    <script src="./script.js"></script>
+                    <script src="../public/js/script.js"></script>
+
+                    esta rutas si me funcionan
+                    <script src="../modulos import export/modulos.js"></script>
+                    <script src="./modulos.js"></script>
+            -->
+            <script src="./modulos.js" type="module"></script><!--cuidado con el nombre de las ruta de acceso por eso no funciona le puse.modulos.js  y hay si me tomo-->
+            <script src="./noModulos.js" nomodule></script><!--con no module si no soporta modulos no ejecutara este escrip-->
+            <!--si lo pruebo con el internet explorer ejecuta el src que tiene el nomodule -->
+            
+        </body>
+
+</html>

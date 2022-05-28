@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Maneras de ordenar strign </p>
+    <script>
+        
+        //Ordenando string normales:
+        console.log(" ");
+        const nombres=[`james`,`anna`,`colin`,`rita`];
+        console.log(`nombres sin ordenar: `+ nombres);
+        console.log(" ");
+        console.log("nombres ordenados:");
+        const nombresOrdenados = nombres.sort();
+        console.log(nombresOrdenados);
+        console.log(" ");
+        //ordenando alrevez
+        console.log("nombres ordenados alrevez: ");
+        const nombresRevertidos=nombresOrdenados.reverse();
+        console.log(nombresRevertidos);
+        console.log(" ");
+        
+        //ordenando numeros
+        console.log("*ordenando numeros*");
+        console.log(" ");
+        const numeros=[10,30,5,40,100,1];
+        console.log(`numeros sin ordenar: `+numeros);
+        console.log(" ");
+        /*la fucnio se encarga de ordenarlos de menor a mayor El método sort() 
+        puede ordenar valores negativos, cero y positivos en el orden correcto. 
+        Cuando compara dos valores, los envía a nuestra función de comparación y
+         luego ordena los valores de acuerdo al resultado devuelto.  
+         
+         Si el resultado es negativo, a se ordena antes que b.
+         Si el resultado es positivo, b se ordena antes de a.
+         Si el resultado es 0, nada cambia.
+         
+         Todo lo que necesitamos es usar la función de comparación dentro del método sort()*/
+        console.log( );
+        const numerosOrdenados=numeros.sort(function(a, b){return a - b});
+        console.log("numeros ordenados acendente");
+        console.log(numerosOrdenados);
+        console.log(" ");
+        console.log("numeros en forma decendente");
+        const numerosAlrevez=numeros.sort(function(a,b){return b - a});
+        console.log(numerosAlrevez);
+        console.log(" ");
+
+        //string con numeros ordenarlo
+        const element=[`e3`,`e1`,`e6`,`e23`,`e0`];
+        console.log("ordenando numeros y letras guiandonos por el numero:");
+        console.log(" ");
+        console.log(`elementos desordenados: `+element);
+        console.log(" ");
+        const elementosOrdenados=element.sort(function(a,b){return +a.slice(-1) - +b.slice(-1)});
+        console.log(`elementos ordenados: `+elementosOrdenados);
+        console.log(" ");
+
+
+    //string con numeros largos 
+        console.log("string con numeros largos :");
+        console.log(" ");
+        const r=/\d+/;
+        const largoElement=[
+            `e 99`,`e 1001`,`e 5`,`e 30`,`e 465`
+        ];
+        console.log(`elementos largos sin ordenar: `+largoElement);
+        console.log(" ");
+        const ordenado1=largoElement.sort(function(a,b){return a.match(r) - b.match(r)});
+        console.log(`elementos ordenados: `+ordenado1);
+        console.log(" ");
+        console.log("ordenados al revez:");
+        const elementosAlrevez=largoElement.sort(function(a,b){return b.match(r) - a.match(r)});
+        console.log(" ");
+        console.log(`elementos alrevez: `+elementosAlrevez);
+        console.log(" ");
+
+        //ordenando objetos
+        console.log(" ");
+        const obj=[
+            {id: 7, nombre: `jhon`},
+            {id: 16, nombre: `jane`},
+            {id: 32, nombre: `kim`},
+            {id: 109, nombre: `billy`},
+            {id: 28, nombre: `yuki`}
+        ];
+     
+            console.log(" ");
+        console.log("objetos ordenados por su id: ");
+        console.log(" ");
+        const objOrdenado=obj.sort(function(a,b){ return a.id - b.id});
+        console.log(objOrdenado);
+       
+     
+    </script>
+    </body>
+</html>

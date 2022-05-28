@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Objetos literales</p>
+    <script>
+        /* nueva forma de escribir atributos y metodos*/
+        let nombre= "paco",
+            edad=7;
+
+            const perro={
+                nombre:nombre,
+                edad:edad,
+                ladrar:function(){
+                    console.log("wauu,guauuu!!!");
+                }
+            }
+                //usando el objeto
+            console.log(perro);
+            perro.ladrar()
+            console.log("              ");
+            console.log("----------------");
+                
+            const dog={
+                //java se da cuenta de que el nombre de la propiedad es igual que a este y que 
+                //necesitamos el valor de la propiedad nombre = nombre
+                    nombre,edad,raza:"callejero",
+                    /*los metodos tambien se pueden simplificar 
+                    ladrar:function(){
+                        console.log("wuauu guaww uagg");
+                        simplificado en la siguiente exprecion
+                    }*/
+                    ladrar(){
+                        console.log("wuauu guaww uagg !!!!!!");
+                    }
+                }
+                console.log(dog);
+                console.log("       ");
+                dog.ladrar()
+    </script>
+    </body>
+</html>

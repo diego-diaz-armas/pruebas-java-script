@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>OBJETOS</p>
+    <script>
+    
+    let a = new String("hola");
+    console.log(a);
+
+    /*new es un objeto lo
+    llamamos en este caso para 
+    inicializar esta este tipo de datos dentro 
+    de esta variable*/
+
+    const b={}
+    //el console dice que es un prototype : object
+    console.log(b);
+
+        /*es preferible crear objetos con la
+        variante const por que evita que le asignemos
+        otro valor oque un nuevo objeto cambie la
+        referencia de este(ocupe la referencia en memoria
+        de este objeto) */
+
+        const c=new Object();
+        console.log(c);
+        /*object es un prototipo asi */
+
+        const die={
+            nombre:"diego",
+            apellido:"diaz",
+            edad:35,
+            hobby:["cojer","cagar","dormir","correr"],
+            inteligente:false,
+            
+            contacto: { email:"quetejodan@gmail.com",
+                twitter:"@quetejodan",
+                celular:"0999999" 
+            },
+
+            saludar: function () {
+                console.log("hola");
+            },
+            miNombre: function(){
+                console.log(
+                `
+                Hola me llamo ${this.nombre} 
+                y mi apellido${this.apellido} y 
+                puedes llamarme ${this.contacto.celular}`);
+            }
+        }
+
+        console.log(die);
+        
+        //accediemdo a los atributos de mi object
+        console.log(die["nombre"]);
+        console.log(die["contacto"]);
+        console.log(die["saludar"]);
+        
+        //forma mas aceptada
+        console.log(die.hobby);
+
+        /*objetos es una coleccion de funciones
+        arrays, etc.
+        dentro de un objeto a las variables se le 
+        denominan atributos/propiedad
+        y las funciones se llaman metodos 
+        se usan entre {}*/
+
+        console.log(die.saludar);
+        console.log(die.hobby[2]);
+        console.log(die.contacto.email);
+        
+        //usar correctamente la funcion del
+        //dentro de mi objeto
+        
+        die.saludar();
+        die.miNombre();
+
+        console.log("metodo keys");
+        console.log(Object.keys(die));
+        //el metodo keys espera un objeto es un metodo
+        //que mermite listar todas las llaves de este objeto
+
+        console.log("metodo values");
+        console.log(Object.values(die));
+
+        /*el metodo values nos devuelve todos 
+        los valores de este objeto*/
+
+        /*permite saber si un objeto tiene alguna propiedad*/
+        console.log("                   ");
+        console.log("con hasOwnProperty tiene nombre?");
+        console.log(die.hasOwnProperty("nombre"));
+        
+        console.log("               ");
+        console.log("con hasOwnProperty tiene sexo?");
+        console.log(die.hasOwnProperty("sexo"));
+    </script>
+</body> 
+
+</html>

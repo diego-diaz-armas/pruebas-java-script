@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    </head>
+
+    <body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Arrow functions</p>
+    <script>
+       /*sirve para mejorar la manera en que escribimos*/
+       /*nueva forma de escribir funciones anonimas y expresadas*/
+
+       const saludo=function(){
+            /*esto es una funcion expresada y anonima*/
+            console.log("hola");
+       }
+
+       saludo();
+
+       //fuincion declarada 
+       console.log("            ");
+       //las funciones declaradas on pueden ser llamadas antes que la funcion aunque javascript hace un
+       //joystic de funcionessi son declaradas no pueden ser llamadas antes
+       function saludar1(){
+           console.log("adios");
+       }
+       saludar1();
+
+       //una arrow function es:
+       const saludo2=()=>{
+           console.log("gg arrow function");
+       }
+       saludo2();
+       console.log("           ");
+
+       //y si tengo solo una linea en mi arrow function
+       const saludo3=()=> console.log("en una sola linea");
+       saludo3();
+
+       //ejmplos
+       console.log("   ");
+
+       const saludo4=(nombre)=>console.log(`hola${nombre} `);
+       saludo4(" diego");
+       console.log("++++++++"); 
+
+       //si recibimos solo un parametro no es necesario poner los parentesis
+
+       const saludo5=nombre=>console.log(`chau ${nombre} `);
+       saludo5(" diego");
+       console.log("++++++++");
+
+       console.log("++++++++");
+       //funcion expreasda para ver la sumatoria
+       const sum=function(a,b){
+           return a+b;
+        
+       }
+       console.log(sum(8,9));
+       console.log("-------------");
+
+       //como arrow functions: aca no podemos omitir los parentesis por que resibo 2 parametros
+       const sumar= (a,b)=>a+b;
+       console.log(sumar(10,5));
+       //esta funcion tieneun return implisito por que en este caso se puede
+
+       //arrow function de varias lineas
+       console.log("    ");
+       const funcDeVriasLienas=()=>{
+           console.log("unos");
+           console.log("dos");
+           console.log("tres");
+       }
+       funcDeVriasLienas();
+       console.log("---------------");
+       //si tubieramos una funcion que itera en un arreglo
+       const numeros=[1,2,3,4,5];
+
+       numeros.forEach(function(el,index) {
+          console.log(`ee elemneto ${el} esta en la posicion${index}`); 
+       });
+       //convirtiendo el anterior a arrow function}
+       console.log("**********");
+       numeros.forEach((el,index)=>{//se pueden oitir las }
+           console.log(`el numero ${el} esta en la posicion${index}`);
+       });
+
+       console.log("-------------------------");
+       //this hace referencia al objeto o al contexto que son bloque de llaves como ejemplo
+
+       //funcion declarada
+
+       function perro(){
+           console.log(this);
+       }
+        //como perro esta en el contexto del navegador se vuelve el this de ese contexto
+       perro();
+       console.log("----------------");
+       //pero
+
+       const perro2={
+           nombre:"paco",
+           ladrar: function(){
+            //()=>{// para hacerlo arrow functio sacamos esto function(){ pero lo cambia de contexto al contexto general
+            //en este caso this nos habla del contexto de este objeto que tiene la funcion ladrar
+           console.log(this)
+        }
+       }
+       perro2.ladrar();
+
+       //hay que tener cuidado con las arrow function por el contexto que de una manera puede cambiar 
+       //en el caso anterior el this ignora el contexto de perro con arrow function y se va al contexto
+       //general del navegador los metodos(funciones) en un objeto literal van con function para no tener problemas
+
+       console.log("            ");
+    </script>
+    </body>
+</html>

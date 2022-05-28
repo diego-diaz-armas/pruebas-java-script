@@ -1,0 +1,3 @@
+desde aora usare xampp por que el live server me dio error 
+las paguinas hay que colocarlas en 
+este equipo/c:/xampp/htdocs pegar la carpeta hay

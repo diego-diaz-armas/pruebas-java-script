@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Funciones</p>
+    <script>
+     /*una funcion en javascriptes:
+
+     ES UN BLOQUE DE CODIGO, AUTOCONTENIDO
+     ,QUE SE PUEDE DEFINIR UNA VEZ Y EJUCTAR
+     EN CUALQUIER MOMENTO, OPCIONALMENTE
+     PUEDE ACEPTAR PARAMETROS Y DEVOLVER UN 
+     VALOR.
+
+     LAS FUNCIONES EN JAVASCRIPT SON OBJETOS,
+     UN TIPO ESPECIAL DE OBJETO.
+
+     SE DICE QUE LAS FUNCIONES SON CIUDADANOS DE
+     PRIMERA CLASE PORQUE PUEDEN ASIGNARSE A UN
+     VALOR,Y PUEDEN PASARSE COMO ARGUMENTO Y
+     USARSE COMO UN VALOR DE RETORNO.
+
+     -----------------------------------------
+     funcion declaradas:
+     function Nombre(){cuerpode la func.}
+     */ 
+    function primera(){
+        
+        console.log("priemro hago eso");
+        console.log("cuando me llamen");
+        console.log("                ");
+        //si el return estubiera arriba el
+        //interprete saltea las linas que esten despues 
+        //del return
+        return 19;
+    }
+    function segunda(){
+        console.log("segundo hago eso");
+        console.log("cuando me llamen");
+        console.log("                ");
+    }
+
+    /*funcion declarada pero devuelve valor*/
+    function tercera(){
+        console.log("tercera retorna:  hola");
+        console.log("                ");
+        return "La funcion a retornado una cadena de texto";
+}
+
+    /*invocacion de funciones*/
+    primera();
+    segunda();
+    tercera();
+    /*para ver que retorna tercera lo del return 
+    tengo que asignarselo a una variable */
+    console.log("                ");
+    let f3=tercera();
+    console.log(f3);
+    let f1=primera();
+    console.log(f1);
+   //-----------------------------------------
+   //Recibir valor con una funcion o parametros
+   declarada();
+   
+   function saludo(nom,ape){
+console.log(`hola mi nombre es :${nom} y mi 
+apellido es :${ape}`);
+   }
+saludo("diego","diaz");
+saludo();
+console.log("             ");
+
+function saludo2(nom="jose",ape="pedro"){
+console.log(`hola mi nombre es :${nom} y mi 
+apellido es :${ape}`);
+   }
+saludo2("diego","diaz");
+saludo2();
+
+function declarada(){
+    console.log(`esto es una funcion declarada 
+    puede ejecutarse en cualquie parte de nuestro 
+    codigo, incluso antes de que la funcion sea 
+    declarada `);
+}
+//Funciones declaradas vs funciones expresadas
+   /*javascript va interpretando o
+    compliando el codigo el compliador
+     automaticamente sube primero las 
+     variables y luego las funciones por eso 
+     no inporta donde seadeclarada en el 
+     orden del archivo*/
+
+
+    //funcion anonima y esta funcion esta agregada
+    //a una variable
+    
+    //funcionExpresada();
+
+    const funcionExpresada=function(){
+        console.log(`
+
+        esto es una fucnion expresada
+        es decir, una funcion que se le a asignado 
+        como valor a una variable, si invocamos esta funcion
+        antes de su definicion JSnos dira
+         uncaught por quela llamas antes de crearrla 
+          si la llamo antes pasa eso`);
+    }
+    funcionExpresada();
+
+    /*con las funciones expresadas hay que tener
+    cuidad existe un ordenamiento de codigo 
+    como regla general que es:
+
+    1.importaciones de modulos.
+    2.declaraciones de variables.
+    3.declaracion de funcines.
+    4.ejecucion del codigo.
+
+     */
+
+     otraexpresada=function(){
+         console.log(`esta es una funcion 
+         expresada sin ser asignada a una
+          variable`);
+     }
+     otraexpresada();
+   </script>
+</body>
+
+</html>

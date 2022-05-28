@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>Arreglos-Arrays</p>
+    <script>
+        /*proto= prototipo programacion
+        orientada a objetos (POO)
+        _proto__: Arrays (0)
+         [] un juego de corchetes ya es un 
+        un arreglo para el interprete del
+        navegador los arreglos tienen la
+        propiedad length :0 si esta vacio*/
+
+        /*se le puede asignar a const avarios 
+        elementos como arreglos, fuinciones,
+        y objetos siempre y cuando no dejen de
+         ser unade estas*/
+
+        const a=[];
+        console.log(a); 
+
+        /*un arrays son una coleccion de elementos
+        y los elementos pueden ser de diferente tipo*/
+
+        const b=[1,true,"hola",["A","B","C"]];
+        console.log(b);
+
+        /*los areglos tienen un indice de posiciones
+        la primera es 0 que aca es 0=primero,
+        1=segundo y 3=tercero*/
+        const c=["primero","segundo","tercero"];
+        console.log("               ");
+        console.log(c);
+        console.log(c.length);
+        /*length solo va a devolver el numero de elementos*/
+        
+        
+        /*acceder a un dato dentro del arreglo*/
+        console.log(c[1]);
+        console.log(b[2]);
+
+        /*en b hay un arreglo anidado dentro
+        de otro si yo quisiera acceder seria*/
+         
+        console.log(b[3][1]);
+       
+        /*si tenemos 3 arrays anidados seria*/
+        const d=["a",1,false,["si","no",[21,"exito"]]];
+        console.log(d[3][2][1]);
+
+        /*otra forma de crear arreglos:*/
+
+         const f= Array.of("x","y","z",8,9,7);
+         console.log(f);
+
+         /*hay un metodo que te permite inicializar
+          un array y asignarle a todas sus posiciones
+          el mismo elemento metodo fill*/
+
+         const g=Array(50).fill(true);
+         console.log(g);
+        
+         /*practicas no usadas*/
+         const r=new Array();
+         console.log(r);
+
+         const t=new Array(1,2,true,"no se usa mas");
+         console.log(t[3]);
+
+         /*ya no se usa mas con el constructor NEW*/
+
+         /*medtodos de los arrays*/
+         const colores=["red","green","blue"];
+        console.log(colores);
+
+        //metodo push agrega 1 elemento a un array siempre lo pone al final
+
+        colores.push("black");
+        console.log(colores);
+
+        //metodo pop elimina el ultimo elementos
+        colores.pop();
+        console.log(colores);
+
+        /*existen nuevs metodos para los arrays
+        ultimamente con el paradigma funcional
+        orientado a componentes*/
+
+        /*un ultimo metodo que permite ejecutar una
+        funcion para cada elemento de mi arreglo*/
+
+        colores.forEach(function (el,index){
+            console.log(`<li id="${index}">${el}</li>`);
+        });
+        
+    </script>
+</body> 
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>Constantes</h1>
+<script>
+    //no se puede hacer const nueve; y luego asignarle un valor
+    //no puedes reasignar el valor a una constante
+    //constante nueva
+    console.log("*********** constante comun ***********");
+    const Pi=3.1416;
+    console.log(Pi);
+    console.log("                              ");
+    console.log("*********** variable comun ***********");
+    let a;
+    a="diego";
+    console.log(a);
+
+    //objeto son variables compuestas
+    console.log("                              ");
+    console.log("*********** let como objeto y arreglo ***********");
+    console.log("*********** 1 esta el objeto luego elarreglo ***********");
+    let objeto={
+        nombre:"Diego",
+        edad:35
+    }
+    
+    
+    //arreglo son
+    let arreglo=[
+        "rojo","verde","azul"
+    ];
+
+    //agregarle atributos a un objeto
+    objeto.apellido="diaz";
+
+    //agregarle un color al array o areglo push es una funcion de los arreglos
+    arreglo.push("naranja");
+
+    //imprimiendo objeto y arreglo
+    console.log(objeto);
+    console.log(arreglo);
+    console.log("                              ");
+    console.log("++++++++++ const como objeto o arreglo ++++++");
+    console.log("*********** 1 esta el objeto luego elarreglo ***********");
+    /*las constantes pueden ser objetos o arreglos y ser modificadas*/
+
+    //objeto son variables compuestas
+    const objeto1={
+        nombre:"Diego",
+        edad:35
+    }
+    //arreglo son
+    const arreglo1=[
+        "rojo","verde","azul"
+    ];
+
+    //agregarle atributos a un objeto
+    objeto1.apellido="diaz";
+
+    //agregarle un color al array o areglo push es una funcion de los arreglos
+    arreglo1.push("naranja");
+
+    //imprimiendo objeto y arreglo
+    console.log(objeto1);
+    console.log(arreglo1);
+</script>
+
+<body>
+
+
+</body>
+</html>
