@@ -10,4 +10,5 @@ console.log(" ");
   
 */
 //llamamos la constante de modulos
-import {} from "./constantes";
+import {PI} from "./constantes.js";
+console.log(PI);
