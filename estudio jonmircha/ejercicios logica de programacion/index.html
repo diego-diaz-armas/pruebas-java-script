@@ -26,10 +26,14 @@
         console.log(" ");
 
         //otra manera con funciones: 
-        function saludo1(text="hola mundo"){
-        console.log(`la cantidad de letras de `+saludo+` =`+ saludo.length);
-        
-        }
+        function saludo1(){
+            let texto=prompt("escibe hola mundo:");
+            if (!/^[a-zA-Z0-0 ]+$/.test(texto)){
+                alert("solo se permiten letras para hola mundo");
+            }else{
+        console.log(`la cantidad de letras de `+texto+` =`+ texto.length);
+            }
+        }//esta validado para letras y espacio
         saludo1();
         console.log(" ");
 
