@@ -12,7 +12,59 @@
     <h1>Fundamentos Javascript</h1>
     <br>
     <p>ejercicios de logica de progrmacion</p>
- 
-        </body>
+    <!--
+1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+    -->
+   <script >
+       console.log("1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion(Hola Mundo) devolverá 10.");
+       let saludo= new String("hola mundo");
+       console.log(" ");
+        console.log(`la cantidad de letras de `+saludo+` =`+ saludo.length);
+        console.log(" ");
+
+        //otra manera con funciones: 
+        function saludo1(text="hola mundo"){
+        console.log(`la cantidad de letras de `+saludo+` =`+ saludo.length);
+        
+        }
+        saludo1();
+        console.log(" ");
+
+        console.log("2)Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion(Hola Mundo, 4) devolverá Hola.");
+        console.log(" ");
+
+        function cortar(){
+            let cadena1="hola mundo";
+            let cadena2=cadena1.slice(0,4);   
+            console.log(`el resultado es: `+cadena2); 
+        }
+        cortar();
+        console.log(" ");
+
+        console.log("3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].");
+        console.log(" ");
+        function separar(texto='hola que tal'){
+            console.log(texto.split(" "));
+        }
+        separar();
+
+        console.log(" ");
+
+        console.log("4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.");
+        
+        function repetir(){
+            let texto='hola mundo ';
+             let texto2=texto.repeat(3);
+            console.log(texto2);
+        }
+        repetir();
+        console.log(" ");
+        console.log("fin");
+   </script> 
+
+</body>
 
 </html>
