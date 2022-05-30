@@ -27,9 +27,9 @@
 
         //otra manera con funciones: 
         function saludo1(){
-            let texto=prompt("escibe hola mundo:");
+            let texto=prompt("ejercicio 1) escibe hola mundo:");
             if (!/^[a-zA-Z0-0 ]+$/.test(texto)){
-                alert("solo se permiten letras para hola mundo");
+                alert("solo se permiten letras para su palabra y no puede quedar vacio; )");
             }else{
         console.log(`la cantidad de letras de `+texto+` =`+ texto.length);
             }
@@ -40,17 +40,26 @@
         console.log("2)Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion(Hola Mundo, 4) devolverá Hola.");
         console.log(" ");
 
-        function cortar(){
-            let cadena1="hola mundo";
-            let cadena2=cadena1.slice(0,4);   
+        function cortar(){//mejorar el programa
+            let cadena1=prompt("ejercicio ) escibe su palabras a cortar:");
+            let corte=prompt("escriba un numero de letras a cortar:");
+
+            if (!/^[a-zA-Z ]+$/.test(cadena1)){
+                alert("solo se permiten letras para en la palabra)");
+            }else if(!/^[0-9]+$/.test(corte)){
+                alert("solo se permiten numros para el corte de su palabra:");
+            }else{
+                console.log(`su palabra sin corte: `+cadena1);
+                let cadena2=cadena1.slice(0,corte);   
             console.log(`el resultado es: `+cadena2); 
+            }
         }
         cortar();
         console.log(" ");
 
         console.log("3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].");
         console.log(" ");
-        function separar(texto='hola que tal'){
+        function separar(texto=prompt("escriba una oracion para separar: ")){
             console.log(texto.split(" "));
         }
         separar();
@@ -60,10 +69,16 @@
         console.log("4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.");
         
         function repetir(){
-            let texto='hola mundo ';
-             let texto2=texto.repeat(3);
-            console.log(texto2);
+            let texto=prompt("escriba una oracion para repetir: ");
+            let crepetir=prompt("escriba que cantidad de veces quiere repetir: ");
+            if (/^[0-9]+$/.test(crepetir)){
+                let texto2=texto.repeat(crepetir);
+            console.log(` `+texto2);
+               
+            }else if (!/^[0-9]+$/.test(crepetir)){
+                alert("el solo puede ingrsar numero para las veses quedese repetir");
         }
+    }
         repetir();
         console.log(" ");
         console.log("fin");
