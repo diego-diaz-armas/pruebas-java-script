@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+    
+</head>
+
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <br>
+    <p>ejercicios de logica de progrmacion</p>
+    <!--
+1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+    -->
+    <script>
+        console.log("ejercicio 1)*****");
+        console.log(" ");
+        console.log("1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion(``Hola Mundo`) devolverá 10.");
+            console.log(" ");
+        //funcion declarada
+        function ContarCaracteres(cadena=""){
+            if(!cadena){
+                console.warn("no ingresastes ninguna palabra");
+            }else {
+                console.info(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
+            }
+        }
+
+            ContarCaracteres();//situacion vacia
+            ContarCaracteres("shaoling monks");//situacion con palabras
+
+            console.log(" ");
+            //como es una funcion espresada
+          
+                const contarCar=(cadena="")=>
+                (!cadena)
+                ?console.warn("la palabras esta vacia")
+                :console.info(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+                //esta arrow function tiene un return inplisito
+
+                contarCar();//situacion vacia
+                contarCar("rambo esta en mk 11");//situacion con palabras	
+
+                console.log(" ");
+
+            console.log("fin del profe ejercicio 1)");
+
+
+
+
+
+
+            console.log(" ");
+
+            console.log("ejercicio 2)*****:");
+            console.log(" ");
+            console.log("2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion(`Hola Mundo, 4`) devolverá `Hola`.");
+            console.log(" ");
+            //todos los ejercicios van a ser funciones expresadas
+    
+                   const recortarTexto =(cadena="",longitud=undefined)=>
+                   (!cadena)
+                   ?console.warn(" no ingresaste ninguna palabra")//si esta vacia
+                   :(longitud===undefined)
+                   ?console.warn("no ingresastes la longitud de corte")
+                   :console.info(cadena.slice(0,longitud));     
+
+                   recortarTexto("la yuki tiene sueño",7);
+                   console.log(" ");
+                   recortarTexto("",5);
+                   console.log(" ");
+                   recortarTexto("hello");//lo repite por problema de la longitud
+                   console.log(" ");
+
+            console.log("fin del ejercicio 2*****");
+
+
+
+
+
+
+   </script> 
+
+</body>
+
+</html>
