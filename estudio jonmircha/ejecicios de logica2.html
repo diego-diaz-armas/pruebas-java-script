@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos javascript</title>
+</head>
+<h1>Ejercicios de logica de programacion2</h1>
+<script>
+    /*
+5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+    */
+/*
+    console.log(`5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".`);
+    console.log(" ");
+
+    function saludo1(){
+            let texto=prompt("ejercicio 5) escibe palabras a invertir:");
+            if(texto==undefined){
+                alert ("a pulsado cancelar");
+            }else if (!/^[a-zA-Z0-9 ]+$/.test(texto)){//esto valida letras y numeros 
+                alert("solo se permiten letras para su palabra y no puede quedar vacio; )");
+            }else{
+                console.log(texto.split("").reverse().join("")); //yo no retorno asi todo funciona en la funcion
+                alert(texto.split("").reverse().join(""));
+            }
+        }
+        saludo1();
+        console.log(" ");
+*/
+        console.log(`6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.`);
+        console.log(" ");
+
+        function ejercicio6(){
+            let texto=prompt("ejercicio 6) escriba una oracion larga:");
+            
+            let palabra=prompt("ingrese una plabra que este repetida:");
+            if(texto==undefined){
+                alert ("a pulsado cancelar");
+            }else if (!/^[a-zA-Z0-9 ]+$/.test(texto)){//esto valida letras y numeros 
+                alert("solo se permiten letras para su palabra y no puede quedar vacio; )");
+            }else{
+                let separadas=texto.split(` `);
+                console.log(separadas);
+                
+                let contador=0;
+
+                for(i=0; i<=separadas.length; i++){
+                    if(palabra==separadas[i]){
+                        contador=contador+1;
+                    }
+                }
+                // esto busca la palabra let numero=separadas.find(texto =>texto == palabra);
+
+                console.log(`su palabra es ${palabra} y se repite ${contador} veces.`);
+            }
+        }
+//la oracion de abajo es para buscar genio
+//hola soy pinocho un genio sin control y los genio no somos genio y como genio lento y seguro el genio va
+        ejercicio6();
+   
+</script>
+
+<body>
+
+
+</body>
+</html>
