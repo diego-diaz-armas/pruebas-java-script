@@ -19,19 +19,20 @@
     console.log(" ");
 
     function saludo1(){
-            let texto=prompt("ejercicio 5) escibe palabras a invertir:");
-            if(texto==undefined){
+            let texto2=prompt("ejercicio 5) escibe palabras a invertir:");
+            if(texto2==undefined){
                 alert ("a pulsado cancelar");
-            }else if (!/^[a-zA-Z0-9 ]+$/.test(texto)){//esto valida letras y numeros 
+            }else if (!/^[a-zA-Z0-9 ]+$/.test2(texto2)){//esto valida letras y numeros 
                 alert("solo se permiten letras para su palabra y no puede quedar vacio; )");
             }else{
-                console.log(texto.split("").reverse().join("")); //yo no retorno asi todo funciona en la funcion
-                alert(texto.split("").reverse().join(""));
+                console.log(texto2.split("").reverse().join("")); //yo no retorno asi todo funciona en la funcion
+                alert(texto2.split("").reverse().join(""));
             }
         }
         saludo1();
         console.log(" ");
 */
+/*
         console.log(`6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.`);
         console.log(" ");
 
@@ -63,7 +64,62 @@
 //hola soy pinocho un genio sin control y los genio no somos genio y como genio lento y seguro el genio va
         ejercicio6();
         console.log(" ");
-   
+        */
+       
+        /*
+   console.log(`7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.`);
+   console.log(" ");
+
+   function ejercicio7(){
+            let texto1=prompt("ejercicio 7) escriba una oracion larga:");
+  
+            if(texto1==undefined){
+                alert ("a pulsado cancelar");
+            }else if (!/^[a-zA-Z ]+$/.test(texto1)){//esto valida letras y numeros 
+                alert("solo se permiten letras para su palabra y no puede quedar vacio; )");
+            }else{
+               texto3=texto1.split("").reverse().join(""); //yo no retorno asi todo funciona en la funcion
+                //alert(texto1.split("").reverse().join(""));
+               
+               if (texto3===texto1){
+                console.log("su palara se le igual al derecho que alrevez:");
+                console.log(texto3);
+               console.log(texto1);
+               }else{
+                console.log("su palabra no se le igual alderecho como alrevez:");
+                console.log(texto3);
+               console.log(texto1);
+               }
+           
+
+            }
+        }
+        ejercicio7();
+        console.log(" ");
+        */
+       console.log(`8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.`);
+       console.log(" ");
+
+       function ejercicio8(){
+            let texto5=prompt("escriba una oracion con algun parametro repetido:");
+            let param=prompt("escriba su parametro repetido a quitar:");
+            
+            if(texto5==undefined || param==undefined){
+                alert ("a pulsado cancelar");
+            }else if (!/^[a-zA-Z0-9  ]+$/.test(texto5)||!/^[a-zA-Z0-9 ]+$/.test(param)){//esto valida letras y numeros 
+                alert("solo se permiten letras para su palabra y no puede quedar vacio tampoco se mermite caracteres especiales; )");
+            }else{
+                console.log(texto5);
+            console.log(param);
+            let cortado=texto5.split("");
+           
+          
+            console.log(cortado);
+            cortado = cortado.filter(item => item !==param );//borra lo que tenga param en el array cortado
+            console.log(cortado); 
+            }
+       }
+       ejercicio8();
 </script>
 
 <body>
